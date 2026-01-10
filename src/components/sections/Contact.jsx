@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll"
+import "../sections/contact.js"
 
 
 export const Contact = () => {
