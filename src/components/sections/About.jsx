@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import profileImage from "../../assets/profile.png";
 
 export const About = () => {
   const frontendSkills = [
@@ -30,7 +31,18 @@ export const About = () => {
 
           <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="glass-panel rounded-[2rem] p-6 sm:p-7 md:p-8 lg:p-10">
-              <h3 className="section-title text-2xl font-bold text-white">Who I am</h3>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+                <div className="relative w-fit">
+                  <div className="absolute -inset-2 rounded-full bg-cyan-400/20 blur-lg" />
+                  <img
+                    src={profileImage}
+                    alt="Pesandi Munasinghe"
+                    className="relative h-24 w-24 rounded-full border-2 border-cyan-300/50 object-cover object-[center_15%] shadow-[0_14px_35px_rgba(34,211,238,0.24)] sm:h-40 sm:w-40"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="section-title text-2xl font-bold text-white">Who I am</h3>
+              </div>
               <p className="mt-5 leading-8 text-slate-300">
                 Motivated and detail-oriented web developer undergraduate with a strong foundation in front-end and back-end technologies, including HTML, CSS, Bootstrap, JavaScript, Java, PHP, React, and TailwindCSS. I focus on building interfaces that feel current, clear, and visually memorable.
               </p>
