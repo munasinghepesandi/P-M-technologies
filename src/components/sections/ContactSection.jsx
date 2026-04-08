@@ -35,20 +35,20 @@ export const ContactSection = () => {
     };
 
     return(
-        <section id="contact" className="min-h-screen flex items-center justify-center px-4 py-24">
+        <section id="contact" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
             <RevealOnScroll>
 
-                <div className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                <div className="mx-auto grid w-full max-w-6xl gap-6 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
                     <div className="flex flex-col justify-center">
                         <div className="section-eyebrow text-cyan-300/80">Contact</div>
-                        <h2 className="section-title mt-3 text-4xl font-bold text-white md:text-5xl">
+                        <h2 className="section-title mt-3 text-3xl sm:text-4xl font-bold text-white md:text-5xl">
                             Let us create something that feels sharp and memorable.
                         </h2>
                         <p className="mt-5 max-w-xl leading-8 text-slate-400">
                             If you need a website, a redesign, or help turning an idea into a polished interface, send a message and I will reply with the next practical step.
                         </p>
 
-                        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                        <div className="mt-6 sm:mt-8 grid gap-3 sm:gap-4 sm:grid-cols-2">
                             <div className="glass-panel rounded-2xl p-5">
                                 <div className="text-sm text-slate-400">Response</div>
                                 <div className="mt-1 text-lg font-semibold text-white">Fast, direct, and clear</div>
@@ -60,13 +60,13 @@ export const ContactSection = () => {
                         </div>
                     </div>
 
-                    <div className="glass-panel rounded-[2rem] p-6 md:p-8">
-                        <form id="contact-form" className="space-y-5" onSubmit={handleSubmit}>
+                    <div className="glass-panel rounded-[2rem] p-5 sm:p-6 md:p-8">
+                        <form id="contact-form" className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
                             <div>
                                 <label className="mb-2 block text-sm font-medium text-slate-300" htmlFor="name">Name</label>
                                 <input type="text" 
                                 id="name" name="name" 
-                                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="Your name" 
+                                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 sm:px-5 py-2.5 sm:py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="Your name" 
                                 required/>
                             </div>
                             <div>
@@ -74,7 +74,7 @@ export const ContactSection = () => {
                                 <input type="email" 
                                 id="email" 
                                 name="email" 
-                                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="you@example.com" 
+                                className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 sm:px-5 py-2.5 sm:py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="you@example.com" 
                                 required/>
                             </div>
                             <div>
@@ -83,12 +83,12 @@ export const ContactSection = () => {
                                  id="message" 
                                  name="message"
                                  required
-                                 rows={6} 
-                                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="Tell me about your project.."/>
+                                 rows={5} 
+                                 className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 sm:px-5 py-2.5 sm:py-3 text-white transition placeholder:text-slate-500 focus:border-cyan-400/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/10" placeholder="Tell me about your project.."/>
                             </div>
 
                             <button type="submit" 
-                            className="w-full rounded-2xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_18px_40px_rgba(34,211,238,0.22)]">Send message</button>
+                            className="w-full rounded-2xl bg-cyan-400 px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_18px_40px_rgba(34,211,238,0.22)]">Send message</button>
 
                             {statusMessage ? (
                                 <p

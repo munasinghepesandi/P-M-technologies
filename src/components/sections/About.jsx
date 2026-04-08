@@ -14,13 +14,13 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-4 py-24"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24"
     >
       <RevealOnScroll>
         <div className="mx-auto max-w-6xl">
-          <div className="mb-12 text-center">
+          <div className="mb-8 sm:mb-10 md:mb-12 text-center">
             <div className="section-eyebrow text-cyan-300/80">Profile</div>
-            <h2 className="section-title mt-3 text-4xl font-bold text-white md:text-5xl">
+            <h2 className="section-title mt-3 text-3xl sm:text-4xl font-bold text-white md:text-5xl">
               Built for thoughtful interfaces and reliable execution.
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-slate-400">
@@ -28,14 +28,14 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-            <div className="glass-panel rounded-[2rem] p-8 md:p-10">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="glass-panel rounded-[2rem] p-6 sm:p-7 md:p-8 lg:p-10">
               <h3 className="section-title text-2xl font-bold text-white">Who I am</h3>
               <p className="mt-5 leading-8 text-slate-300">
                 Motivated and detail-oriented web developer undergraduate with a strong foundation in front-end and back-end technologies, including HTML, CSS, Bootstrap, JavaScript, Java, PHP, React, and TailwindCSS. I focus on building interfaces that feel current, clear, and visually memorable.
               </p>
 
-              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="mt-6 sm:mt-8 grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 md:grid-cols-2">
                 <div className="rounded-3xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
                   <h3 className="text-lg font-semibold text-white">Frontend</h3>
 
@@ -62,8 +62,8 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="glass-panel rounded-[2rem] p-8">
+            <div className="space-y-5 sm:space-y-6">
+              <div className="glass-panel rounded-[2rem] p-6 sm:p-7 md:p-8">
                 <h3 className="section-title text-2xl font-bold text-white">Education</h3>
                 <ul className="mt-5 space-y-4 text-slate-300">
                   <li className="rounded-2xl border border-white/10 bg-white/5 p-4">

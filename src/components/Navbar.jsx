@@ -7,7 +7,7 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
 
   return (
     <nav className="fixed top-0 z-40 w-full border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 md:px-8">
         <div className="flex h-16 items-center justify-between py-2">
 
           <a href="#home" className="flex items-center gap-3 group">
