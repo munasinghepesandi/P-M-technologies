@@ -9,11 +9,9 @@ class Database {
         }
     }
 
-        
     public static function iud($q){
         Database::setupConnection();
         $resultset = Database::$connection->query($q);
-        
     }
 
     public static function search($q){
@@ -23,4 +21,4 @@ class Database {
     }
 }
 
-?>        
+?>

@@ -2,39 +2,48 @@ import { useEffect } from "react";
 
 export const Navbar = ({menuOpen, setMenuOpen}) => {
     useEffect(() => {
-        document.body.style.overflow = menuOpen? "hidden" : "";
+        document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+    <nav className="fixed top-0 z-40 w-full border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between py-2">
 
-          <a href="#home" className="font-monotext-xl font-bold text-white">
-            {" "}
-            P&M<span className="text-blue-500"> Technologies</span>{" "}
+          <a href="#home" className="flex items-center gap-3 group">
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 text-sm font-bold text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.18)] transition-transform duration-300 group-hover:-translate-y-0.5">
+              P&M
+            </span>
+            <span className="font-semibold tracking-wide text-white">
+              Technologies
+            </span>
           </a>
 
-          <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() => setMenuOpen(prev => !prev)}>
-            &#9776;
-          </div>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-cyan-400/40 hover:bg-cyan-400/10 md:hidden"
+            onClick={() => setMenuOpen(prev => !prev)}
+            aria-label="Toggle Menu"
+          >
+            <span className="text-2xl leading-none">&#9776;</span>
+          </button>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden items-center gap-8 md:flex">
 
-            <a href="#home" className="text-gray-300 hove:text-white transition-colors">
-                {" "} Home {""}
+            <a href="#home" className="text-sm text-slate-300 transition hover:text-white">
+                Home
             </a>
 
-            <a href="#about" className="text-gray-300 hove:text-white transition-colors">
-                {" "} About {""}
+            <a href="#about" className="text-sm text-slate-300 transition hover:text-white">
+                About
             </a>
 
-            <a href="#projects" className="text-gray-300 hove:text-white transition-colors">
-                {" "} Projects {""}
+            <a href="#projects" className="text-sm text-slate-300 transition hover:text-white">
+                Projects
             </a>
 
-            <a href="#contact" className="text-gray-300 hove:text-white transition-colors">
-                {" "} Contact {""}
+            <a href="#contact" className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-300/50 hover:bg-cyan-400/20">
+                Contact
             </a>
 
           </div>

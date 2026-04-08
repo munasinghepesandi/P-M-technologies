@@ -8,7 +8,8 @@ import {Home} from './components/sections/Home';
 import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
 import "./index.css";
-import { Contact } from './components/sections/Contact';
+import { ContactSection } from './components/sections/ContactSection';
+import { Footer } from './components/Footer';
 
 function App() {
   const [isLoaded, setLoaded] = useState(false)
@@ -17,9 +18,9 @@ function App() {
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setLoaded(true)}/>}{""}
-      <div className={`min-h-screen transition-opacity duration-700 ${
+      <div className={`page-shell min-h-screen transition-opacity duration-700 ${
         isLoaded ? "opacity-100" : "opacity-0"
-      } bg-black text-gray-100`}
+      } text-gray-100`}
       >
 
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
@@ -27,7 +28,8 @@ function App() {
         <Home/>
         <About/>
         <Projects/>
-        <Contact/>
+        <ContactSection/>
+        <Footer/>
 
       </div>
     </>

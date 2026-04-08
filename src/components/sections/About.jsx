@@ -14,70 +14,81 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center px-4 py-24"
     >
       <RevealOnScroll>
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            About Me
-          </h2>
-
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-            <p className="text-gray-300 mb-6">
-              Motivated and detail-oriented web developer undergraduate, with a
-              strong foundation in front-end and back-end technologies,
-              including HTML, CSS, Bootstrap, JavaScript, Java and PHP.
-              Experienced in designing responsive e-commerce websites and
-              passionate about creating userfriendly digital solutions. Actively
-              pursuing opportunities to contribute and innovate in the tech
-              industry. experience.
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <div className="section-eyebrow text-cyan-300/80">Profile</div>
+            <h2 className="section-title mt-3 text-4xl font-bold text-white md:text-5xl">
+              Built for thoughtful interfaces and reliable execution.
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-slate-400">
+              I combine front-end craft with practical back-end awareness to create digital products that feel refined, work smoothly, and scale cleanly.
             </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 translation-all">
-                <h3>Frontend</h3>
-
-                <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech, key) => (
-                    <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2] transision">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-xl p-6 hover:-translate-y-1 translation-all">
-                <h3>Bckendend</h3>
-
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
-                    <span className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2] transision">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Education</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>
-                  <strong>BSc (Hon.)Software Engineering </strong> Birmingham
-                  City University, UK (Present)
-                </li>
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="glass-panel rounded-[2rem] p-8 md:p-10">
+              <h3 className="section-title text-2xl font-bold text-white">Who I am</h3>
+              <p className="mt-5 leading-8 text-slate-300">
+                Motivated and detail-oriented web developer undergraduate with a strong foundation in front-end and back-end technologies, including HTML, CSS, Bootstrap, JavaScript, Java, PHP, React, and TailwindCSS. I focus on building interfaces that feel current, clear, and visually memorable.
+              </p>
 
-                <li>Relevant Coursework: Web Development (ReactJS)....</li>
-              </ul>
+              <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+                  <h3 className="text-lg font-semibold text-white">Frontend</h3>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {frontendSkills.map((tech) => (
+                      <span key={tech} className="rounded-full border border-cyan-400/15 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-100">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+                  <h3 className="text-lg font-semibold text-white">Backend</h3>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {backendSkills.map((tech) => (
+                      <span key={tech} className="rounded-full border border-cyan-400/15 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-100">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-xl font-bold mb-4">Soft Skills</h3>
-              <div className="space-y-4 text-gray-300">
-                <p>Good communication , Time management</p>
-                <p>Problem solving , Teamworking</p>
+            <div className="space-y-6">
+              <div className="glass-panel rounded-[2rem] p-8">
+                <h3 className="section-title text-2xl font-bold text-white">Education</h3>
+                <ul className="mt-5 space-y-4 text-slate-300">
+                  <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <strong className="text-white">BSc (Hon.) Software Engineering</strong> at Birmingham City University, UK, present.
+                  </li>
+                  <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <strong className="text-white">Certificate in JavaScript and AI </strong> at CodeVerse, UK, Present.
+                  </li>
+                  <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <strong className="text-white">Certificate in FullStack Engineering</strong> from StemLink(2025).
+                  </li>
+                  <li className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    Relevant coursework includes web development, React, and practical software engineering fundamentals.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="glass-panel rounded-[2rem] p-8">
+                <h3 className="section-title text-2xl font-bold text-white">Soft Skills</h3>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 text-slate-300">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Clear communication</div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Time management</div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Problem solving</div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Team collaboration</div>
+                </div>
               </div>
             </div>
           </div>
