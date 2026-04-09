@@ -14,7 +14,7 @@ export const Home = () => {
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="text-left">
             <div className="section-eyebrow mb-4 text-cyan-300/80">
-              P&M Technologies
+              PESANDI MUNASINGHE
             </div>
 
             <h1 className="section-title mb-4 sm:mb-6 max-w-3xl text-4xl sm:text-5xl font-bold leading-[1.02] text-white md:text-6xl lg:text-7xl xl:text-8xl">
