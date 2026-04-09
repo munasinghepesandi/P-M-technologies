@@ -44,22 +44,70 @@ export const Projects = () => {
             <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
               <div className="flex items-center justify-between">
                 <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
-                <span className="text-xs text-slate-400">Expo / ReactNative</span>
+                <span className="text-xs text-slate-400">React / Tailwind</span>
               </div>
 
-              <h3 className="mt-5 text-2xl font-semibold text-white">Avurudu App</h3>
+              <h3 className="mt-5 text-2xl font-semibold text-white">Student Dashboard</h3>
               <p className="mt-4 leading-7 text-slate-300">
-                A mobile app built to celebrate the Sri Lankan New Year with a collection of traditional games, designed for smooth performance and a festive user experience.
+                This project is a student dashboard designed to provide an intuitive interface for managing academic information, schedules, and resources.
               </p>
               <p className="mt-4 text-slate-400">
-                Developed with React Native and Expo, featuring a clean interface and responsive design for a wide range of devices.
+                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
               </p>
-              <a href="https://avurudu2026.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
-                Visit mobile demo
+              <a href="https://pmtech-dashboard.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
+                Visit demo
               </a>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                {['HTML', 'CSS', 'JavaScript', 'React Native', 'Expo'].map((tech) => (
+                {['React', 'TailwindCSS', 'ANT Design'].map((tech) => (
+                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
+                ))}
+              </div>
+            </article>
+
+            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+              <div className="flex items-center justify-between">
+                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
+                <span className="text-xs text-slate-400">React / Tailwind</span>
+              </div>
+
+              <h3 className="mt-5 text-2xl font-semibold text-white">DressMe Clothing</h3>
+              <p className="mt-4 leading-7 text-slate-300">
+                This project is an e-commerce website for a clothing shop, designed to provide a seamless shopping experience with a focus on aesthetics and usability.
+              </p>
+              <p className="mt-4 text-slate-400">
+                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
+              </p>
+              <a href="https://pmtech-dressme.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
+                Visit demo
+              </a>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {['React', 'TailwindCSS'].map((tech) => (
+                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
+                ))}
+              </div>
+            </article>
+
+            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+              <div className="flex items-center justify-between">
+                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
+                <span className="text-xs text-slate-400">React / Tailwind</span>
+              </div>
+
+              <h3 className="mt-5 text-2xl font-semibold text-white">AI Chat Platform</h3>
+              <p className="mt-4 leading-7 text-slate-300">
+                This project is an AI-powered chat platform designed to provide a natural and engaging conversation experience with a focus on responsiveness and user satisfaction.
+              </p>
+              <p className="mt-4 text-slate-400">
+                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
+              </p>
+              <a href="https://simple-aichatbot.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
+                Visit demo
+              </a>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                {['React', 'TailwindCSS'].map((tech) => (
                   <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
                 ))}
               </div>
@@ -83,7 +131,7 @@ export const Projects = () => {
               </a>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                {['HTML', 'CSS', 'JavaScript', 'React Native', 'Expo'].map((tech) => (
+                {['React Native', 'Expo'].map((tech) => (
                   <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
                 ))}
               </div>

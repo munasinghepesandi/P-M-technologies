@@ -12,12 +12,17 @@ export const ContactSection = () => {
 
         const form = event.currentTarget;
         const formData = new FormData(form);
+        const payload = {
+            name: String(formData.get("name") || "").trim(),
+            email: String(formData.get("email") || "").trim(),
+            message: String(formData.get("message") || "").trim(),
+        };
 
         setStatusType("loading");
         setStatusMessage("Sending message...");
 
         try {
-            const responseText = await sendContactForm(formData);
+            const responseText = await sendContactForm(payload);
 
             if (responseText.trim().toLowerCase() === "success") {
                 form.reset();
