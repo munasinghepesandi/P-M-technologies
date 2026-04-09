@@ -5,10 +5,13 @@ export const About = () => {
   const frontendSkills = [
     "HTML",
     "CSS",
-    "Bootstrap",
     "React",
-    "TailwindCSS",
     "JavaScript",
+    "React Native",
+    "TypeScript",
+    "TailwindCSS",
+    "Bootstrap",
+    
   ];
   const backendSkills = ["PHP", "MySQL", "Java", "Python"];
 
