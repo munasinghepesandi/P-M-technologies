@@ -47,7 +47,7 @@ export const About = () => {
                 <h3 className="section-title text-2xl font-bold text-white">Who I am</h3>
               </div>
               <p className="mt-5 leading-8 text-slate-300">
-                Motivated and detail-oriented web developer undergraduate with a strong foundation in front-end and back-end technologies, including HTML, CSS, Bootstrap, JavaScript, Java, PHP, React, and TailwindCSS. I focus on building interfaces that feel current, clear, and visually memorable.
+                I'm a software engineer specializing in web development, with a passion for crafting clean, user-friendly interfaces and robust back-end solutions. With a background in both front-end and back-end technologies, I bring a holistic approach to building digital products that are not only visually appealing but also functionally reliable and scalable.
               </p>
 
               <div className="mt-6 sm:mt-8 grid grid-cols-1 gap-4 sm:gap-5 md:gap-6 md:grid-cols-2">
