@@ -22,7 +22,7 @@ export const Projects = () => {
 
             <article className="glass-panel group rounded-[2rem] p-5 sm:p-6 md:p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Portfolio</span>
+                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
                 <span className="text-xs text-slate-400">React / Tailwind</span>
               </div>
 
