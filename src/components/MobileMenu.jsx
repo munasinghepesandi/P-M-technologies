@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "../config/socialLinks";
+
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
@@ -44,6 +46,24 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`my-4 text-2xl font-semibold text-white transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
       >
         Contact
+      </a>
+
+      <a
+        href={SOCIAL_LINKS.linkedin}
+        target="_blank"
+        rel="noreferrer"
+        className={`my-4 text-2xl font-semibold text-white transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href={SOCIAL_LINKS.github}
+        target="_blank"
+        rel="noreferrer"
+        className={`my-4 text-2xl font-semibold text-white transition-all duration-300 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+      >
+        GitHub
       </a>
     </div>
   );

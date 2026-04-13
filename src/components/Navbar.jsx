@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SOCIAL_LINKS } from "../config/socialLinks";
 
 export const Navbar = ({menuOpen, setMenuOpen}) => {
     useEffect(() => {
@@ -40,6 +41,24 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
 
             <a href="#projects" className="text-sm text-slate-300 transition hover:text-white">
                 Projects
+            </a>
+
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-slate-300 transition hover:text-white"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href={SOCIAL_LINKS.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm text-slate-300 transition hover:text-white"
+            >
+              GitHub
             </a>
 
             <a href="#contact" className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-300/50 hover:bg-cyan-400/20">

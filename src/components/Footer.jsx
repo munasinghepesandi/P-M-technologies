@@ -1,3 +1,5 @@
+import { SOCIAL_LINKS } from "../config/socialLinks";
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -23,6 +25,22 @@ export const Footer = () => {
           </a>
           <a href="#contact" className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white">
             Contact
+          </a>
+          <a
+            href={SOCIAL_LINKS.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={SOCIAL_LINKS.github}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white"
+          >
+            GitHub
           </a>
         </div>
       </div>
