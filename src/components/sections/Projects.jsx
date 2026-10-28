@@ -1,163 +1,149 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
+const projects = [
+  {
+    id: 1,
+    category: "Portfolio",
+    title: "Pesandi | Munasinghe Portfolio",
+    description: "This personal brand portfolio — built with React, TailwindCSS v4, and a Node.js/MySQL backend — showcasing clean animations, a contact API, and a refined dark aesthetic.",
+    tech: ["React", "TailwindCSS", "Node.js", "MySQL"],
+    link: null,
+    status: "Live",
+  },
+  {
+    id: 2,
+    category: "Dashboard",
+    title: "Student Dashboard",
+    description: "An intuitive academic management dashboard for tracking schedules, modules, and resources. Designed for clarity and daily utility.",
+    tech: ["React", "TailwindCSS", "ANT Design"],
+    link: "https://pmtech-dashboard.netlify.app/",
+    status: "Live",
+  },
+  {
+    id: 3,
+    category: "E-Commerce",
+    title: "DressMe Clothing",
+    description: "A sleek e-commerce platform for a clothing brand. Focused on aesthetics, smooth browsing flows, and a responsive layout across all screen sizes.",
+    tech: ["React", "TailwindCSS"],
+    link: "https://pmtech-dressme.netlify.app/",
+    status: "Live",
+  },
+  {
+    id: 4,
+    category: "AI Platform",
+    title: "AI Chat Platform",
+    description: "An AI-powered conversational interface designed for natural, engaging interactions — clean, responsive, and easy to use.",
+    tech: ["React", "TailwindCSS"],
+    link: "https://simple-aichatbot.netlify.app/",
+    status: "Live",
+  },
+  {
+    id: 5,
+    category: "Mobile App",
+    title: "Avurudu App",
+    description: "A cross-platform mobile app celebrating Sri Lankan New Year with traditional games, built for smooth performance and a festive user experience.",
+    tech: ["React Native", "Expo"],
+    link: "https://avurudu2026.netlify.app/",
+    status: "Live",
+  },
+  {
+    id: 6,
+    category: "Software",
+    title: "Application Development",
+    description: "Hotel and library management systems with a focus on OOP principles, clean system design, and structured database integration.",
+    tech: ["Java OOP", "System Design", "Database Logic"],
+    link: null,
+    status: "Ongoing",
+  },
+];
+
+const statusColor = {
+  Live:    { dot: "bg-green-400",  text: "text-green-400" },
+  Ongoing: { dot: "bg-yellow-400", text: "text-yellow-400" },
+};
+
 export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 md:py-28"
     >
       <RevealOnScroll>
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-8 sm:mb-10 md:mb-12 text-center">
-            <div className="section-eyebrow text-cyan-300/80">Portfolio</div>
-            <h2 className="section-title mt-3 text-3xl sm:text-4xl font-bold text-white md:text-5xl">
-              Featured work presented with professional clarity.
+        <div className="mx-auto max-w-7xl">
+
+          {/* Header */}
+          <div className="mb-12 text-center">
+            <div className="section-eyebrow text-blue-400/80">Portfolio</div>
+            <h2 className="section-title mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              Things I've{" "}
+              <span className="gradient-text">built &amp; shipped.</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-sm sm:text-base text-slate-400">
-              A few examples of interface and application work that balance user experience, responsiveness, and practical development value.
+            <p className="mx-auto mt-4 max-w-2xl text-slate-400">
+              A selection of projects showcasing my approach to interface design, front-end engineering, and practical full-stack development.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-3">
+          {/* Grid */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map(project => {
+              const sc = statusColor[project.status] ?? { dot: "bg-slate-400", text: "text-slate-400" };
+              return (
+                <article
+                  key={project.id}
+                  className="glass-card group relative flex flex-col rounded-2xl p-6 overflow-hidden"
+                >
+                  {/* Top row */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="rounded-full border border-blue-500/20 bg-blue-500/8 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-wider text-blue-300">
+                      {project.category}
+                    </span>
+                    <span className={`flex items-center gap-1.5 text-xs font-medium ${sc.text}`}>
+                      <span className={`h-1.5 w-1.5 rounded-full ${sc.dot}`} />
+                      {project.status}
+                    </span>
+                  </div>
 
-            <article className="glass-panel group rounded-[2rem] p-5 sm:p-6 md:p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Portfolio</span>
-                <span className="text-xs text-slate-400">React / Tailwind</span>
-              </div>
+                  {/* Title */}
+                  <h3 className="section-title text-lg font-semibold text-white mb-2 leading-snug">
+                    {project.title}
+                  </h3>
 
-              <h3 className="mt-5 text-2xl font-semibold text-white">P&M Technologies Website</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                This site is built as a modern personal brand presence with smooth section flow, strong contrast, and a premium dark aesthetic.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Designed to feel clean, focused, and easy to browse on any screen size.
-              </p>
+                  {/* Description */}
+                  <p className="text-sm leading-6 text-slate-400 flex-1">
+                    {project.description}
+                  </p>
 
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['React', 'TailwindCSS', 'EmailJS'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
+                  {/* Tech tags */}
+                  <div className="mt-5 flex flex-wrap gap-1.5">
+                    {project.tech.map(t => (
+                      <span key={t} className="rounded-full border border-white/[0.08] bg-white/[0.04] px-2.5 py-0.5 text-[0.72rem] text-slate-400">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
 
-            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
-                <span className="text-xs text-slate-400">React / Tailwind</span>
-              </div>
+                  {/* Link */}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm text-blue-400 font-medium hover:text-blue-300 transition-colors"
+                    >
+                      View Live Demo
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-3.5 h-3.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
+                  )}
 
-              <h3 className="mt-5 text-2xl font-semibold text-white">Student Dashboard</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                This project is a student dashboard designed to provide an intuitive interface for managing academic information, schedules, and resources.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
-              </p>
-              <a href="https://pmtech-dashboard.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
-                Visit demo
-              </a>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['React', 'TailwindCSS', 'ANT Design'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
-
-            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
-                <span className="text-xs text-slate-400">React / Tailwind</span>
-              </div>
-
-              <h3 className="mt-5 text-2xl font-semibold text-white">DressMe Clothing</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                This project is an e-commerce website for a clothing shop, designed to provide a seamless shopping experience with a focus on aesthetics and usability.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
-              </p>
-              <a href="https://pmtech-dressme.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
-                Visit demo
-              </a>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['React', 'TailwindCSS'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
-
-            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
-                <span className="text-xs text-slate-400">React / Tailwind</span>
-              </div>
-
-              <h3 className="mt-5 text-2xl font-semibold text-white">AI Chat Platform</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                This project is an AI-powered chat platform designed to provide a natural and engaging conversation experience with a focus on responsiveness and user satisfaction.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Developed with React and TailwindCSS, featuring a clean interface and responsive design for a wide range of devices.
-              </p>
-              <a href="https://simple-aichatbot.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
-                Visit demo
-              </a>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['React', 'TailwindCSS'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
-
-            <article className="glass-panel group rounded-[2rem] p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex items-center justify-between">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Individual</span>
-                <span className="text-xs text-slate-400">Expo / ReactNative</span>
-              </div>
-
-              <h3 className="mt-5 text-2xl font-semibold text-white">Avurudu App</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                A mobile app built to celebrate the Sri Lankan New Year with a collection of traditional games, designed for smooth performance and a festive user experience.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Developed with React Native and Expo, featuring a clean interface and responsive design for a wide range of devices.
-              </p>
-              <a href="https://avurudu2026.netlify.app/" className="mt-5 inline-flex text-cyan-300 transition hover:text-cyan-200">
-                Visit mobile demo
-              </a>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['React Native', 'Expo'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
-
-            <article className="glass-panel group rounded-[2rem] p-5 sm:p-6 md:p-7 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">Ongoing</span>
-                <span className="text-xs text-slate-400">Java / OOP</span>
-              </div>
-
-              <h3 className="mt-5 text-2xl font-semibold text-white">Software Application Development</h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                Developing application solutions for hotel management and library management systems with a focus on structure and maintainability.
-              </p>
-              <p className="mt-4 text-slate-400">
-                Currently evolving into a more polished and scalable solution.
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {['Java OOP', 'System design', 'Database logic'].map((tech) => (
-                  <span key={tech} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200">{tech}</span>
-                ))}
-              </div>
-            </article>
+                  {/* Hover radial glow */}
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.07),transparent_70%)]" />
+                </article>
+              );
+            })}
           </div>
+
         </div>
       </RevealOnScroll>
     </section>

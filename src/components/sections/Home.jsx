@@ -1,101 +1,93 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import profileImage from "../../assets/prf.jpeg";
 
 export const Home = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden px-4 sm:px-6 md:px-8 pb-12 sm:pb-16 md:pb-20 pt-24 sm:pt-28 md:pt-32 flex items-center justify-center"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-24 pb-16"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_25%),radial-gradient(circle_at_80%_20%,rgba(99,102,241,0.18),transparent_25%),linear-gradient(180deg,rgba(2,6,23,0.18),rgba(2,6,23,0.92))]" />
-      <div className="pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-      <div className="pointer-events-none absolute bottom-10 right-10 h-56 w-56 rounded-full bg-indigo-500/15 blur-3xl animate-float-slow" />
+      {/* Background decorations */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_70%_at_10%_-10%,rgba(37,99,235,0.18),transparent),radial-gradient(ellipse_50%_50%_at_90%_10%,rgba(29,78,216,0.14),transparent)]" />
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-80 w-80 rounded-full bg-blue-600/12 blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute bottom-24 right-12 h-56 w-56 rounded-full bg-indigo-600/10 blur-3xl animate-float-slow" style={{ animationDelay: "3s" }} />
 
       <RevealOnScroll>
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 sm:gap-10 md:gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="text-left">
-            <div className="section-eyebrow mb-4 text-cyan-300/80">
-              PESANDI MUNASINGHE
-            </div>
+        <div className="relative z-10 mx-auto grid w-full max-w-[1400px] items-center gap-8 lg:grid-cols-[minmax(0,560px)_minmax(360px,1fr)] lg:gap-12">
 
-            <h1 className="section-title mb-4 sm:mb-6 max-w-3xl text-4xl sm:text-5xl font-bold leading-[1.02] text-white md:text-6xl lg:text-7xl xl:text-8xl">
-              Professional web experiences built with clarity and precision.
-            </h1>
+          {/* ── Left: Text content ── */}
+          <div className="flex max-w-[600px] flex-col items-start justify-center lg:pl-2">
 
-            <p className="max-w-2xl text-sm sm:text-base leading-7 sm:leading-8 text-slate-300 md:text-lg">
-              I am Pesandi Munasinghe, a web developer and founder focused on building clean digital products with strong performance, clear structure, and a refined visual presence.
+            {/* Greeting */}
+            <p className="mb-3 text-base font-medium text-slate-400 tracking-wide">
+              Hi there, I'm
             </p>
 
-            <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4">
-              <a
-                href="#projects"
-                className="rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-300 hover:shadow-[0_18px_40px_rgba(34,211,238,0.25)]"
-              >
-                View Work
-              </a>
+            {/* Name */}
+            <h1 className="section-title mb-5 text-[3.4rem] sm:text-[4.5rem] lg:text-[6rem] font-bold leading-[0.9] tracking-[-0.06em]">
+              <span className="gradient-text block">Pesandi</span>
+              <span className="text-white block">Munasinghe</span>
+            </h1>
 
-              <a
-                href="#contact"
-                className="rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:bg-cyan-400/10"
-              >
-                Start a Project
+            {/* Role chips */}
+            <div className="mb-6 flex flex-wrap gap-2.5">
+              {["Web Developer", "Software Engineer", "UI Designer"].map(role => (
+                <span key={role} className="rounded-full border border-blue-500/20 bg-blue-500/8 px-4 py-1.5 text-sm font-medium text-blue-300">
+                  {role}
+                </span>
+              ))}
+            </div>
+
+            {/* Bio */}
+            <p className="mb-8 max-w-xl text-base leading-8 text-slate-400">
+              I build fast, accessible, and visually polished web experiences. Focused on clean code, intuitive interfaces, and solid full-stack structure that scales.
+            </p>
+
+            {/* CTAs */}
+            <div className="mb-10 flex flex-wrap gap-3">
+              <a href="#projects" className="btn-primary">
+                View My Work
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+              <a href="#contact" className="btn-secondary">
+                Get in Touch
               </a>
             </div>
 
-            <div className="mt-8 sm:mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-3">
-              <div className="glass-panel rounded-2xl p-3 sm:p-4">
-                <div className="text-2xl font-bold text-white">Strategy</div>
-                <div className="mt-1 text-sm text-slate-400">Clear goals and direction</div>
-              </div>
-
-              <div className="glass-panel rounded-2xl p-4">
-                <div className="text-2xl font-bold text-white">Delivery</div>
-                <div className="mt-1 text-sm text-slate-400">Responsive, reliable output</div>
-              </div>
-
-              <div className="glass-panel rounded-2xl p-4">
-                <div className="text-2xl font-bold text-white">Support</div>
-                <div className="mt-1 text-sm text-slate-400">Ongoing refinement</div>
-              </div>
+            {/* Stats */}
+            <div className="grid w-full max-w-md grid-cols-3 gap-3">
+              {[
+                { value: "3+",  label: "Years Learning" },
+                { value: "10+", label: "Projects Built" },
+                { value: "8+",  label: "Technologies" },
+              ].map(stat => (
+                <div key={stat.label} className="glass-panel rounded-2xl p-4 text-center">
+                  <div className="text-xl font-bold gradient-text">{stat.value}</div>
+                  <div className="mt-1 text-[0.68rem] text-slate-500 leading-4">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="relative">
-            <div className="glass-panel relative overflow-hidden rounded-[2rem] p-6 sm:p-7 md:p-8 shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.14),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(99,102,241,0.14),transparent_30%)]" />
+          {/* ── Right: Profile image (desktop only) ── */}
+          <div className="relative hidden w-full lg:flex lg:justify-center">
+            {/* Ambient glow */}
+            <div className="absolute inset-x-10 top-1/2 h-[80%] -translate-y-1/2 rounded-full bg-blue-600/10 blur-3xl" />
 
-              <div className="relative space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100">
-                    Professional Focus
-                  </span>
-                  <span className="text-sm text-slate-400">Available for projects</span>
-                </div>
-
-                <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6">
-                  <div className="text-sm uppercase tracking-[0.24em] text-slate-400">Core focus</div>
-                  <div className="mt-3 text-2xl font-semibold text-white">
-                    User-centered web design, front-end development, and practical back-end integration.
-                  </div>
-                </div>
-
-                <div className="grid gap-3 sm:gap-4 sm:grid-cols-2">
-                  {[
-                    "Modern layouts",
-                    "Responsive systems",
-                    "Clear interactions",
-                    "Accessible structure",
-                    "Clean presentation",
-                  ].map((item) => (
-                    <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="group relative mx-auto aspect-square w-full max-w-[520px] overflow-hidden rounded-full border border-blue-300/50 bg-slate-900/60 p-2 ring-2 ring-blue-400/20 shadow-[0_0_35px_rgba(59,130,246,0.35),0_0_80px_rgba(37,99,235,0.2)] transition-shadow duration-500 hover:border-blue-200/80 hover:ring-blue-300/40 hover:shadow-[0_0_45px_rgba(96,165,250,0.55),0_0_100px_rgba(37,99,235,0.3)]">
+              <img
+                src={profileImage}
+                alt="Pesandi Munasinghe"
+                className="h-full w-full rounded-full bg-slate-900 object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110"
+              />
             </div>
+
           </div>
+
         </div>
-      </RevealOnScroll> 
+      </RevealOnScroll>
     </section>
   );
 };

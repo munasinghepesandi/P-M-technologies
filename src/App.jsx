@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import './App.css';
 import { LoadingScreen } from './components/sections/LoadingScreen';
 import { Navbar } from './components/Navbar';
@@ -14,10 +14,11 @@ import { Footer } from './components/Footer';
 function App() {
   const [isLoaded, setLoaded] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const handleLoadingComplete = useCallback(() => setLoaded(true), [])
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setLoaded(true)}/>}{""}
+      {!isLoaded && <LoadingScreen onComplete={handleLoadingComplete}/>}{" "}
       <div className={`page-shell min-h-screen transition-opacity duration-700 ${
         isLoaded ? "opacity-100" : "opacity-0"
       } text-gray-100`}
